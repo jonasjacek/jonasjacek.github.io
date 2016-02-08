@@ -1,223 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Robots Exclusion Standard (Robots.txt) Syntax, Tutorial & Examples</title>
-<meta charset="utf-8">
-<meta name="description" content="Syntax cheat sheet for the robots.txt protocol also known as the Robots Exclusion Protocol or Standard. How to allow and disallow bots, spiders & crawlers.">
-<link rel="stylesheet" href="/css/all.css">
-</head>
-<body>
-  <div id="a">
-    <header>
-      <p><a href="/" title="Go to Homepage"><strong>rield.com</strong> - Everything Bots and Semantics - Microformats - HTML - CSS - Apache - Rewrites</a></p>
-    </header>
-    <div id="b">
+  <head>
+    <meta charset="utf-8">
+    <title>Robots Exclusion Standard (Robots.txt) Syntax, Tutorial & Examples</title>
+    <meta name="description" content="Syntax cheat sheet for the robots.txt protocol also known as the Robots Exclusion Protocol or Standard. How to allow and disallow bots, spiders & crawlers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" media="screen" href="screen.css">
+  </head>
+  <body>
+    <header><a href="https://jonasjacek.github.io/"><span>jonasjacek.github.io / </span></a> <a href="https://jonasjacek.github.io/robots-exclusion-standard" title="Robots.txt File Protocol and Syntax">robots-exclusion-standard</a></header>
+    <main>
       <article>
         <h1>Robots.txt File Protocol and Syntax</h1>
-        <img class="t" src="/img/robots-txt-protocol.png" title="Robots Exclusion Standard (Robots.txt) Syntax, Tutorial & Examples" height="100" width="100"/>
-        <h2>Learn about robots.txt: How to allow and disallow bots, spiders & crawlers making use of the robots.txt protocol also known as the Robots Exclusion Protocol or Robots Exclusion Standard.</h2>
         <p>In 1993 and 1994 there have been occasions where robots have visited WWW servers where they were not welcome for various reasons. This led to the invention of &quot;robots.txt&quot; or Robots Exclusion Protocol around 1994 by members of the robots mailing list (robots-request@nexor.co.uk). It was later popularized and extended with the advent of AltaVista and other popular search engines in the following years. The Robots Exclusion Protocol, became a de facto standard on the Internet without having ever taken to a RFC (W3C Request For Comments).</p>
-<p>Until today the Robots Exclusion Standard is a convention to prevent cooperating (obeying robots.txt) web spiders and other web robots from accessing a web site in whole or parts of a web site which is otherwise publicly viewable.</p>
-<p>Web robots / crawlers are still used by search engines to categorize and archive web sites. Webmasters usually use crawlers to proofread source code (validation) as well as to analyze web sites e.g. for search engine optimization (SEO) purposes.</p>
-<h3>Robots.txt Location</h3>
-<p>If you want to give instructions to web robots you must place a text file called robots.txt in the root of your web site hierarchy (e.g. www.domain.com/robots.txt). This text file should contain the instructions in a specific format (see syntax and examples below).</p>
-<h3>Robots Exclusion Protocol - Standard Syntax &amp; Semantics</h3>
-<p>Apart from comment line(s) a robots.txt contains one or more data sets (records) separated by one or more blank lines.</p>
-<p>Each record contains lines of the form:</p>
-<pre>
-<code>[field]:[optionalspace][value][optionalspace]</code></pre>
-<p>Although often stated different on the Internet, the field name is case sensitive (see examples below).</p>
-<p>The first matching robots.txt pattern always wins.</p>
-<table><caption>Robots.txt Protocol - Standard Syntax & Semantics</caption>
-	<tbody>
-		<tr>
-			<th>
-				Part</th>
-			<th>
-				Description</th>
-		</tr>
-		<tr>
-			<td>User-agent:</td>
-			<td>Specifies the Robot(s). A wildcard is allowed.</td>
-		</tr>
-		<tr>
-			<td>*</td>
-			<td>Wildcard. User-agent: * (zodiac sign) means &quot;All Robots&quot;</td>
-		</tr>
-		<tr>
-			<td>disallow:</td>
-			<td>In every line that begins with &quot;Disallow:&quot;, you can define a path / file. Robots will not index these paths / files on your web site. Wildcards are not allowed. If no path is given (empty value), Disallow equals an allow.</td>
-		</tr>
-		<tr>
-			<td>#</td>
-			<td>Starts a comment line. Comment lines are preceded by a pound sign.</td>
-		</tr>
-	</tbody>
-</table>
-<p>The &quot;Disallow&quot; field specifies a partial URI that is not to be visited. This can be a full path, or a partial path; any URI that starts with this value will not be retrieved.</p>
-<pre>
-<code>Disallow: /help 
-#disallows both /help.html and /help/index.html, whereas
+        <p>Until today the Robots Exclusion Standard is a convention to prevent cooperating (obeying robots.txt) web spiders and other web robots from accessing a web site in whole or parts of a web site which is otherwise publicly viewable.</p>
+        <p>Web robots / crawlers are still used by search engines to categorize and archive web sites. Webmasters usually use crawlers to proofread source code (validation) as well as to analyze web sites e.g. for search engine optimization (SEO) purposes.</p>
+        <h3>Robots.txt Location</h3>
+        <p>If you want to give instructions to web robots you must place a text file called robots.txt in the root of your web site hierarchy (e.g. www.domain.com/robots.txt). This text file should contain the instructions in a specific format (see syntax and examples below).</p>
+        <h3>Robots Exclusion Protocol - Standard Syntax &amp; Semantics</h3>
+        <p>Apart from comment line(s) a robots.txt contains one or more data sets (records) separated by one or more blank lines.</p>
+        <p>Each record contains lines of the form:</p>
+        <pre>
+        <code>[field]:[optionalspace][value][optionalspace]</code></pre>
+        <p>Although often stated different on the Internet, the field name is case sensitive (see examples below).</p>
+        <p>The first matching robots.txt pattern always wins.</p>
+        <table><caption>Robots.txt Protocol - Standard Syntax & Semantics</caption>
+	        <tbody>
+		        <tr>
+			        <th>Part</th>
+			        <th>Description</th>
+		        </tr>
+		        <tr>
+			        <td>User-agent:</td>
+			        <td>Specifies the Robot(s). A wildcard is allowed.</td>
+		        </tr>
+		        <tr>
+			        <td>*</td>
+			        <td>Wildcard. User-agent: * (zodiac sign) means &quot;All Robots&quot;</td>
+		        </tr>
+		        <tr>
+			        <td>disallow:</td>
+			        <td>In every line that begins with &quot;Disallow:&quot;, you can define a path / file. Robots will not index these paths / files on your web site. Wildcards are not allowed. If no path is given (empty value), Disallow equals an allow.</td>
+		        </tr>
+		        <tr>
+			        <td>#</td>
+			        <td>Starts a comment line. Comment lines are preceded by a pound sign.</td>
+		        </tr>
+	        </tbody>
+        </table>
+        <p>The &quot;Disallow&quot; field specifies a partial URI that is not to be visited. This can be a full path, or a partial path; any URI that starts with this value will not be retrieved.</p>
+        <pre>
+        <code>Disallow: /help 
+        #disallows both /help.html and /help/index.html, whereas
 
-Disallow: /help/ 
-# would disallow /help/index.html but allow /help.html</code></pre>
-<h3>Examples Using Standard Syntax &amp; Semantics</h3>
-<p>The Robots Exclusion Protocol is not difficult to understand. The following examples show the Standard Syntax &amp; Semantics in use. I have chosen some examples which I could not find on the Internet already. I hope to clarify some common misunderstandings.</p>
-<p><b>Allow all robots to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
-<pre>
-<code>User-agent: *
-Disallow:</code></pre>
-<p><b>Deny all robots to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
-<pre>
-<code>User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow OneBot to visit all files. Deny all other robots access to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
-<pre>
-<code>User-agent: OneBot
-Disallow:
+        Disallow: /help/ 
+        # would disallow /help/index.html but allow /help.html</code></pre>
+        <h3>Examples Using Standard Syntax &amp; Semantics</h3>
+        <p>The Robots Exclusion Protocol is not difficult to understand. The following examples show the Standard Syntax &amp; Semantics in use. I have chosen some examples which I could not find on the Internet already. I hope to clarify some common misunderstandings.</p>
+        <p><b>Allow all robots to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
+        <pre>
+        <code>User-agent: *
+        Disallow:</code></pre>
+        <p><b>Deny all robots to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
+        <pre>
+        <code>User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow OneBot to visit all files. Deny all other robots access to visit all files</b> - The wildcard &quot;*&quot; specifies all robots</p>
+        <pre>
+        <code>User-agent: OneBot
+        Disallow:
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Deny all robots to visit all files</b> - Disallow without a path specified equals an allow. Here I specified a path. All bots, including OneBot, are not allowed to access the web site.</p>
-<pre>
-<code>User-agent: OneBot
-Disallow: /
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Deny all robots to visit all files</b> - Disallow without a path specified equals an allow. Here I specified a path. All bots, including OneBot, are not allowed to access the web site.</p>
+        <pre>
+        <code>User-agent: OneBot
+        Disallow: /
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files. Deny all other robots access to visit all files</b> - One rule for multiple robots. The wildcard &quot;*&quot; specifies all robots</p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow:
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files. Deny all other robots access to visit all files</b> - One rule for multiple robots. The wildcard &quot;*&quot; specifies all robots</p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow:
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files. Deny BadBot1 access to visit all files</b> - All bots that are not defined in this robots.txt will most likely crawl all files and folders.</p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow:
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files. Deny BadBot1 access to visit all files</b> - All bots that are not defined in this robots.txt will most likely crawl all files and folders.</p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow:
 
-User-agent: BadBot1
-Disallow: /</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files. All other bots can access all files except files located in /private/</b></p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow:
+        User-agent: BadBot1
+        Disallow: /</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files. All other bots can access all files except files located in /private/</b></p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow:
 
-User-agent: *
-Disallow: /private/</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files. All other bots can access all files except files beginning with /private</b> - All bots that are not OneBot or TwoBot are not allowed to crawl files in a folder called /private/ or file starting with &quot;private&quot; e.g. /privatepics.html.</p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow:
+        User-agent: *
+        Disallow: /private/</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files. All other bots can access all files except files beginning with /private</b> - All bots that are not OneBot or TwoBot are not allowed to crawl files in a folder called /private/ or file starting with &quot;private&quot; e.g. /privatepics.html.</p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow:
 
-User-agent: *
-Disallow: /private</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files except those in /private/ and /personal.html. Deny all other robots access to visit all files</b></p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow: /private/
-Disallow: /personal.html
+        User-agent: *
+        Disallow: /private</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files except those in /private/ and /personal.html. Deny all other robots access to visit all files</b></p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow: /private/
+        Disallow: /personal.html
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow OneBot and TwoBot to visit all files except those in /private/ and file beginning with /personal. Deny all other robots access to visit all files</b> - OneBot and TwoBot will not be allowed to access personal.html neither. This example is fairly the same as above, but without specifying a certain file.</p>
-<pre>
-<code>User-agent: OneBot
-User-agent: TwoBot
-Disallow: /private/
-Disallow: /personal
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow OneBot and TwoBot to visit all files except those in /private/ and file beginning with /personal. Deny all other robots access to visit all files</b> - OneBot and TwoBot will not be allowed to access personal.html neither. This example is fairly the same as above, but without specifying a certain file.</p>
+        <pre>
+        <code>User-agent: OneBot
+        User-agent: TwoBot
+        Disallow: /private/
+        Disallow: /personal
 
-User-agent: *
-Disallow: /</code></pre>
-<h3>Robots Exclusion Protocol - Nonstandard Extensions</h3>
-<p>Some major crawlers and web robots support one or more of the following nonstandard extensions of the Robots Exclusion Protocol.</p>
-<table><caption>Robots.txt Protocol - Nonstandard Extensions</caption>
-	<tbody>
-		<tr>
-			<th>
-				Part</th>
-			<th>
-				Description</th>
-		</tr>
-		<tr>
-			<td>Allow:</td>
-			<td>Allow directive which can counteract a following Disallow directive.</td>
-		</tr>
-		<tr>
-			<td>Sitemap:</td>
-			<td>Sitemap directive, allowing multiple Sitemaps in the same robots.txt.</td>
-		</tr>
-		<tr>
-			<td>Crawl-delay: 5</td>
-			<td>Crawl-delay parameter, set to the number of seconds to wait between successive requests to the same server.</td>
-		</tr>
-	</tbody>
-</table>
-<p>You should try not use these. Vendor-specific properties mess up standards and can cause confusion.</p>
-<p>For example, while by standard implementation the first matching robots.txt pattern always wins, Google&#39;s implementation differs in that it first evaluates all Allow patterns and only then all Disallow patterns. Bing uses the Allow or Disallow directive which is the most specific.</p>
-<p>Another example: The &quot;*&quot; character in the Disallow: statement. Some crawlers like Googlebot and Slurp recognize strings containing &quot;*&quot;, while MSNbot and Teoma interpret it in different ways.</p>
-<p>Another example: The Crawl-delay parameter was introduced by Yahoo in 2007 because they were not able to program their web robot in a proper way. The Yahoo! Slup swamped servers with rapid-fire requests and retrieved the same files repeatedly. Today the crawl-delay parameter is also supported by Live Search (MSN/ Bing) and Ask, for the same sad reasons.</p>
-<h3>Examples Using Nonstandard Extensions</h3>
-<p>The following examples should not be used, as they use vendor-specific properties. However, some people might find these examples useful.</p>
-<p><i>It might be wise to put nonstandard extensions as deep as possible in your robots.txt file. Some bots could be confused by them.</i></p>
-<p><b>Allow Googlebot to visit all files. Deny all other robots access to the web site.</b> - In case the only search engine you care about is Google.</p>
-<pre>
-<code>User-agent: Googlebot
-Allow: /
+        User-agent: *
+        Disallow: /</code></pre>
+        <h3>Robots Exclusion Protocol - Nonstandard Extensions</h3>
+        <p>Some major crawlers and web robots support one or more of the following nonstandard extensions of the Robots Exclusion Protocol.</p>
+        <table><caption>Robots.txt Protocol - Nonstandard Extensions</caption>
+	        <tbody>
+		        <tr>
+			        <th>
+				        Part</th>
+			        <th>
+				        Description</th>
+		        </tr>
+		        <tr>
+			        <td>Allow:</td>
+			        <td>Allow directive which can counteract a following Disallow directive.</td>
+		        </tr>
+		        <tr>
+			        <td>Sitemap:</td>
+			        <td>Sitemap directive, allowing multiple Sitemaps in the same robots.txt.</td>
+		        </tr>
+		        <tr>
+			        <td>Crawl-delay: 5</td>
+			        <td>Crawl-delay parameter, set to the number of seconds to wait between successive requests to the same server.</td>
+		        </tr>
+	        </tbody>
+        </table>
+        <p>You should try not use these. Vendor-specific properties mess up standards and can cause confusion.</p>
+        <p>For example, while by standard implementation the first matching robots.txt pattern always wins, Google&#39;s implementation differs in that it first evaluates all Allow patterns and only then all Disallow patterns. Bing uses the Allow or Disallow directive which is the most specific.</p>
+        <p>Another example: The &quot;*&quot; character in the Disallow: statement. Some crawlers like Googlebot and Slurp recognize strings containing &quot;*&quot;, while MSNbot and Teoma interpret it in different ways.</p>
+        <p>Another example: The Crawl-delay parameter was introduced by Yahoo in 2007 because they were not able to program their web robot in a proper way. The Yahoo! Slup swamped servers with rapid-fire requests and retrieved the same files repeatedly. Today the crawl-delay parameter is also supported by Live Search (MSN/ Bing) and Ask, for the same sad reasons.</p>
+        <h3>Examples Using Nonstandard Extensions</h3>
+        <p>The following examples should not be used, as they use vendor-specific properties. However, some people might find these examples useful.</p>
+        <p><i>It might be wise to put nonstandard extensions as deep as possible in your robots.txt file. Some bots could be confused by them.</i></p>
+        <p><b>Allow Googlebot to visit all files. Deny all other robots access to the web site.</b> - In case the only search engine you care about is Google.</p>
+        <pre>
+        <code>User-agent: Googlebot
+        Allow: /
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow Googlebot to visit all files, except those in /private/ except file.html. Deny all other robots access to the web site.</b> - In case the only search engine you care about is Google and you want to give it some private information. It is wise to keep the Allow-rule(set) above the Disallow rule(set), as the first pattern matches.</p>
-<pre>
-<code>User-agent: Googlebot
-Allow: /private/file.html
-Disallow: /private/
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow Googlebot to visit all files, except those in /private/ except file.html. Deny all other robots access to the web site.</b> - In case the only search engine you care about is Google and you want to give it some private information. It is wise to keep the Allow-rule(set) above the Disallow rule(set), as the first pattern matches.</p>
+        <pre>
+        <code>User-agent: Googlebot
+        Allow: /private/file.html
+        Disallow: /private/
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Allow Googlebot and msnbot to visit all files, except those in /private/ except file.html. Deny all other robots access to the web site.</b> - In case the only search engines you care about are Google and Bing and you want to give them some private information. It is wise to keep the Allow-rule(set) above the Disallow rule(set), as the first pattern matches (in this case important for Bing a.k.a. msnbot).</p>
-<pre>
-<code>User-agent: Googlebot
-User-agent: msnbot
-Allow: /private/file.html
-Disallow: /private/
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Allow Googlebot and msnbot to visit all files, except those in /private/ except file.html. Deny all other robots access to the web site.</b> - In case the only search engines you care about are Google and Bing and you want to give them some private information. It is wise to keep the Allow-rule(set) above the Disallow rule(set), as the first pattern matches (in this case important for Bing a.k.a. msnbot).</p>
+        <pre>
+        <code>User-agent: Googlebot
+        User-agent: msnbot
+        Allow: /private/file.html
+        Disallow: /private/
 
-User-agent: *
-Disallow: /</code></pre>
-<p><b>Submit a Sitemap via Robots.txt</b> - Googlebot supports submission of Sitemap files to Google through the robots.txt.</p>
-<pre>
-<code>Sitemap: http://www.domain.com/sitemaps/sitemap-1.xml
-Sitemap: http://www.domain.com/sitemaps/sitemap-2.xml</code></pre>
-<p><b>Tells Slurp to wait for 8 and Bing for 5 seconds between successive requests to your web site</b></p>
-<pre>
-<code>User-agent: Slurp
-Crawl-delay: 8
+        User-agent: *
+        Disallow: /</code></pre>
+        <p><b>Submit a Sitemap via Robots.txt</b> - Googlebot supports submission of Sitemap files to Google through the robots.txt.</p>
+        <pre>
+        <code>Sitemap: http://www.domain.com/sitemaps/sitemap-1.xml
+        Sitemap: http://www.domain.com/sitemaps/sitemap-2.xml</code></pre>
+        <p><b>Tells Slurp to wait for 8 and Bing for 5 seconds between successive requests to your web site</b></p>
+        <pre>
+        <code>User-agent: Slurp
+        Crawl-delay: 8
 
-User-agent: msnbot
-Crawl-delay: 5</code></pre>
-<h3>Disadvantages and Limitations of the Robots Exclusion Protocol</h3>
-<p><b>The protocol is purely advisory.</b> There is no rule or law saying that a robot or crawler has to fetch the robots.txt file first, before accessing a web site. It relies on the cooperation of the web robot. Poorly designed or malicious robots usually ignore the&nbsp;robots.txt file. (See here for effective ways to <a href="/internet-bots/how-to/how-to-block-people-search-engine-bots.html">block search engine bots, spiders &amp; crawlers</a>).</p>
-<p><b>Robots.txt does not guarantee privacy.</b> Marking an area of a web site out of bounds with robots.txt does not guarantee privacy at all! Some web site administrators have tried to use the robots.txt file to make private parts of a web site invisible to the rest of the world, but the file is necessarily publicly available and its content as well as the private parts of the web site can easily checked by anyone with a web browser.</p>
-<h3>Robots.txt Generators and Validators</h3>
-<p>Due to the Nonstandard Extensions of the Robots Exclusion Protocol, most generator tools generate robots.txt files which are not standard compliant. The same is valid for most of the validation tools. Robotstxt.org itself points to Google Webmaster Tools for a generator. Google uses Nonstandard Extensions for generating robots.txt files and requires you to get a Google account. This is all very sad. Use your bare hands and your brain. After reading this article you should be able to do this!</p>
-<h3>Further Readings</h3>
-<ul>
-	<li>
-		<a href="http://www.robotstxt.org/">The Web Robots Pages (robotstxt.org)</a></li>
-	<li>
-		<a href="http://en.wikipedia.org/wiki/Robots_exclusion_standard">Robots Exclusion Standard (Wikipedia)</a></li>
-	<li>
-		<a href="http://www.sxw.org.uk/computing/robots/check.html">A (conservative) Robots.txt Syntax Checker</a></li>
-</ul>
+        User-agent: msnbot
+        Crawl-delay: 5</code></pre>
+        <h3>Disadvantages and Limitations of the Robots Exclusion Protocol</h3>
+        <p><b>The protocol is purely advisory.</b> There is no rule or law saying that a robot or crawler has to fetch the robots.txt file first, before accessing a web site. It relies on the cooperation of the web robot. Poorly designed or malicious robots usually ignore the&nbsp;robots.txt file. (See here for more effective ways to <a href="https://github.com/jonasjacek/licit-robots">block search engine bots, spiders &amp; crawlers</a>).</p>
+        <p><b>Robots.txt does not guarantee privacy.</b> Marking an area of a web site out of bounds with robots.txt does not guarantee privacy at all! Some web site administrators have tried to use the robots.txt file to make private parts of a web site invisible to the rest of the world, but the file is necessarily publicly available and its content as well as the private parts of the web site can easily checked by anyone with a web browser.</p>
+        <h3>Robots.txt Generators and Validators</h3>
+        <p>Due to the Nonstandard Extensions of the Robots Exclusion Protocol, most generator tools generate robots.txt files which are not standard compliant. The same is valid for most of the validation tools. Robotstxt.org itself points to Google Webmaster Tools for a generator. Google uses Nonstandard Extensions for generating robots.txt files and requires you to get a Google account. This is all very sad. Use your bare hands and your brain. After reading this article you should be able to do this!</p>
+        <h3>Further Readings</h3>
+        <ul>
+	        <li><a href="http://www.robotstxt.org/">The Web Robots Pages (robotstxt.org)</a></li>
+	        <li><a href="http://en.wikipedia.org/wiki/Robots_exclusion_standard">Robots Exclusion Standard (Wikipedia)</a></li>
+        </ul>
       </article>
-    </div>
-  </div>
-</body>
+    </main>
+    <footer>
+      <p>This document is maintained by <a href="http://jonas.me/" title="Jonas Jared Jacek">Jonas Jacek</a>. Found a mistake? <a href="https://github.com/jonasjacek/jonasjacek.github.io/">Send a pull request</a>!</p>
+    </footer>
+  </body>
 </html>
-

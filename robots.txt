@@ -1,3 +1,6 @@
+User-agent: AdsBot-Google
+User-agent: adidxbot
+User-agent: archive.org_bot
 User-agent: Baiduspider
 User-agent: Baiduspider-image
 User-agent: bingbot
@@ -12,7 +15,8 @@ User-agent: DuckDuckGo-Favicons-Bot
 User-agent: EuripBot
 User-agent: Exploratodo
 User-agent: Facebot
-User-agent: moget
+User-agent: Feedly
+User-agent: Findxbot
 User-agent: Googlebot
 User-agent: Googlebot-Image
 User-agent: Googlebot-Mobile
@@ -42,6 +46,7 @@ User-agent: SputnikBot
 User-agent: Teoma
 User-agent: yacybot
 User-agent: Yandex
+User-agent: Yeti
 User-agent: YoudaoBot
 Disallow:
 User-agent: *

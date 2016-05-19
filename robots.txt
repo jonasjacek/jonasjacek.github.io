@@ -1,11 +1,17 @@
+User-agent: 360Spider
+User-agent: 360Spider-Image
+User-agent: 360Spider-Video
 User-agent: AdsBot-Google
 User-agent: adidxbot
+User-agent: Applebot
+User-agent: AppleNewsBot
 User-agent: archive.org_bot
 User-agent: Baiduspider
 User-agent: Baiduspider-image
 User-agent: bingbot
 User-agent: BingPreview
 User-agent: CCBot
+User-agent: Cliqzbot
 User-agent: coccoc
 User-agent: Daumoa
 User-agent: Dazoobot
@@ -27,10 +33,10 @@ User-agent: JikeSpider
 User-agent: Lycos
 User-agent: Mail.Ru
 User-agent: Mediapartners-Google
-User-agent: MJ12bot
 User-agent: MojeekBot
 User-agent: msnbot
 User-agent: msnbot-media
+User-agent: OrangeBot
 User-agent: Plukkie
 User-agent: Rambler
 User-agent: SeznamBot
@@ -46,7 +52,9 @@ User-agent: SputnikBot
 User-agent: Teoma
 User-agent: yacybot
 User-agent: Yandex
+User-agent: YandexMobileBot
 User-agent: Yeti
+User-agent: yoozBot
 User-agent: YoudaoBot
 Disallow:
 User-agent: *
